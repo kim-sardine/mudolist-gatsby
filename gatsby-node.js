@@ -9,12 +9,7 @@ exports.createPages = ({ actions }) => {
       path: element.playlist_id,
       component: require.resolve(`./src/pages/detail.js`),
       context: {
-        title: element.title,
-        playlist_id: element.playlist_id,
-        thumbnail_url: element.thumbnail_url,
-        keywords: element.keywords,
-        start_at: element.start_at,
-        end_at: element.end_at,
+        playlist: element
       },
     })
   })

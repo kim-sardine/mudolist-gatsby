@@ -1,29 +1,31 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import queryString from 'query-string'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import List from "../components/list"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+import AllPlaylists from "../../content/index.yaml"
+
+function orderPlaylists(playlists, orderBy) {
+  console.log(orderBy)
+  return playlists
+}
+
+const IndexPage = ({location}) => {
+  const parsed = location.search ? queryString.parse(location.search) : {}
+  const orderBy = parsed.order
+  const targetPlaylists = orderPlaylists(AllPlaylists, orderBy)
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div class="py-5">
+        <List playlists={targetPlaylists} />
+      </div>
+      <h1>{location.search}</h1>
+      <h1>{orderBy}</h1>
+    </Layout>
+  )
+}
 
 export default IndexPage
