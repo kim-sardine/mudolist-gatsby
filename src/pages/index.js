@@ -4,6 +4,7 @@ import queryString from 'query-string'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import List from "../components/list"
+import Category from "../components/category"
 
 import AllPlaylists from "../../content/index.yaml"
 
@@ -19,6 +20,9 @@ const IndexPage = ({location}) => {
   return (
     <Layout>
       <SEO title="Home" />
+      <div class="pt-5">
+        <Category />
+      </div>
       <div class="py-5">
         <List playlists={targetPlaylists} />
       </div>
