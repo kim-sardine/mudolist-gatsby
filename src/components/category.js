@@ -1,20 +1,20 @@
 import * as React from "react"
 
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
-const Category = () => {
+const Category = ({orderBy}) => {
     return (
         <div class="row">
             <div class="col-lg-8 col-md-8 mx-auto">
                 <ul class="nav nav-pills nav-justified">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">랜덤재생</a>
+                        <Link className={`nav-link`} to="/">랜덤재생</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?order=new">최신</a>
+                        <a className={`nav-link ${orderBy == 'new' ? 'active': ''}`} href="?order=new">최신순</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?order=old">오래된</a>
+                        <a className={`nav-link ${orderBy == 'old' ? 'active': ''}`} href="?order=old">오래된순</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">키워드</a>

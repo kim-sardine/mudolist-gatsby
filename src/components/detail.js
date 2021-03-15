@@ -11,9 +11,6 @@ const Detail = ({playlist}) => {
       </div>
       <div>
           <div class="my-4 d-flex justify-content-center align-items-center">
-              {/* <button type="button" class="btn btn-secondary mx-4" data-bs-toggle="modal" data-bs-target="#reportModal" data-bs-title="{{playlist.title}}">수정 요청</button> */}
-              {/* {% include "playlists/playlist_hit_logo.html" with playlist=playlist %} */}
-              {/* <a href="/" class="btn btn-primary mx-4">랜덤 재생</a> */}
               <Link className={`btn btn-primary mx-4`} to="/">랜덤 재생</Link>
           </div>
       </div>

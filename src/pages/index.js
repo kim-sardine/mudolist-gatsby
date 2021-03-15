@@ -8,26 +8,21 @@ import Category from "../components/category"
 
 import AllPlaylists from "../../content/index.yaml"
 
-function orderPlaylists(playlists, orderBy) {
-  console.log(orderBy)
-  return playlists
-}
+import { order } from '../utils';
 
 const IndexPage = ({location}) => {
   const parsed = location.search ? queryString.parse(location.search) : {}
   const orderBy = parsed.order
-  const targetPlaylists = orderPlaylists(AllPlaylists, orderBy)
+  const targetPlaylists = order(AllPlaylists, orderBy)
   return (
     <Layout>
       <SEO title="Home" />
       <div class="pt-5">
-        <Category />
+        <Category orderBy={orderBy} />
       </div>
       <div class="py-5">
         <List playlists={targetPlaylists} />
       </div>
-      <h1>{location.search}</h1>
-      <h1>{orderBy}</h1>
     </Layout>
   )
 }

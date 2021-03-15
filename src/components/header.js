@@ -1,15 +1,17 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
+import { Link } from "gatsby"
+
 const Header = ({ siteTitle }) => (
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
       <div class="container">
-        <a class="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           {siteTitle} <img src={`../../images/bomb.png`} alt="bomb" width="40px" style={{
             verticalAlign: `bottom`
           }} />
-        </a>
+        </Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
