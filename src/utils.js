@@ -7,6 +7,11 @@ export function shuffleArray(array) {
   }
 }
 
+export function getRandomPlaylistURL(playlists) {
+  shuffleArray(playlists);
+  return '/' + playlists[0].playlist_id;
+}
+
 export function order(inputArray, orderBy) {
   if (orderBy) {
     var playlistsWithStartAt = [];

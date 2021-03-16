@@ -2,13 +2,17 @@ import * as React from "react"
 
 import { Link } from "gatsby"
 
+import AllPlaylists from "../../content/index.yaml"
+import { getRandomPlaylistURL } from '../utils';
+
 const Category = ({orderBy}) => {
+    const randomPlaylistURL = getRandomPlaylistURL(AllPlaylists);
     return (
         <div class="row">
             <div class="col-lg-8 col-md-8 mx-auto">
                 <ul class="nav nav-pills nav-justified">
                     <li class="nav-item">
-                        <Link className={`nav-link`} to="/">랜덤재생</Link>
+                        <Link className={`nav-link`} to={randomPlaylistURL}>랜덤재생</Link>
                     </li>
                     <li class="nav-item">
                         <a className={`nav-link ${orderBy == 'new' ? 'active': ''}`} href="?order=new">최신순</a>
