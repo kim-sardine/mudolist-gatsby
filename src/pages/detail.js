@@ -8,6 +8,9 @@ const IndexPage = ({ pageContext }) => {
   const { 
     playlist
   } = pageContext;
+  if (!playlist) {
+    return null;
+  }
 
   const seoTitle = `${playlist.title}`;
   return (
