@@ -5,13 +5,6 @@ module.exports = {
     author: `@kim-sardine`,
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: `G-LWPHHC5SJE`,
-        head: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

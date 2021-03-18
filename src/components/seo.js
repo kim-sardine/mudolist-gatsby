@@ -27,6 +27,7 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const googleAnalyticsId = 'G-LWPHHC5SJE'
 
   return (
     <Helmet
@@ -69,7 +70,17 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', "${googleAnalyticsId}");
+        `}
+      </script>
+    </Helmet>
   )
 }
 
