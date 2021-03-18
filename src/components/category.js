@@ -8,28 +8,28 @@ import { getRandomPlaylistURL } from '../utils';
 const Category = ({orderBy}) => {
     const randomPlaylistURL = getRandomPlaylistURL(AllPlaylists);
     return (
-        <div class="row">
-            <div class="col-lg-8 col-md-8 mx-auto">
-                <ul class="nav nav-pills nav-justified">
-                    <li class="nav-item">
+        <div className="row">
+            <div className="col-lg-8 col-md-8 mx-auto">
+                <ul className="nav nav-pills nav-justified">
+                    <li className="nav-item">
                         <Link className={`nav-link`} to={randomPlaylistURL}>랜덤재생</Link>
                     </li>
-                    <li class="nav-item">
-                        <a className={`nav-link ${orderBy == 'new' ? 'active': ''}`} href="?order=new">최신순</a>
+                    <li className="nav-item">
+                        <a className={`nav-link ${orderBy === 'new' ? 'active': ''}`} href="?order=new">최신순</a>
                     </li>
-                    <li class="nav-item">
-                        <a className={`nav-link ${orderBy == 'old' ? 'active': ''}`} href="?order=old">오래된순</a>
+                    <li className="nav-item">
+                        <a className={`nav-link ${orderBy === 'old' ? 'active': ''}`} href="?order=old">오래된순</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">키워드</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">키워드 1</a></li>
-                            <li><a class="dropdown-item" href="#">키워드 1</a></li>
-                            <li><a class="dropdown-item" href="#">키워드 3</a></li>
-                            <li><hr class="dropdown-divider"></hr></li>
-                            <li><a class="dropdown-item" href="#">키워드 4</a></li>
+                    {/* <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">키워드</a>
+                        <ul className="dropdown-menu">
+                            <li><a className="dropdown-item" href="#">키워드 1</a></li>
+                            <li><a className="dropdown-item" href="#">키워드 1</a></li>
+                            <li><a className="dropdown-item" href="#">키워드 3</a></li>
+                            <li><hr className="dropdown-divider"></hr></li>
+                            <li><a className="dropdown-item" href="#">키워드 4</a></li>
                         </ul>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </div>

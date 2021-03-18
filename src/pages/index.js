@@ -17,10 +17,10 @@ const IndexPage = ({location}) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div class="pt-5">
+      <div className="pt-5">
         <Category orderBy={orderBy} />
       </div>
-      <div class="py-5">
+      <div className="py-5">
         <List playlists={targetPlaylists} />
       </div>
     </Layout>
