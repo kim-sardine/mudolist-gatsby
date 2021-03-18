@@ -11,7 +11,7 @@ const Detail = ({playlist}) => {
   return (
     <div>
       <div class="video-container">
-          <iframe width="560" height="315" src={videoSrc} frameborder="0" title={playlist.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src={videoSrc} frameBorder="0" title={playlist.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <div class="my-4 d-flex justify-content-center align-items-center">
           <Link className={`btn btn-primary mx-4`} to={randomPlaylistURL}>랜덤 재생</Link>

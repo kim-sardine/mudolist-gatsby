@@ -9,7 +9,7 @@ const IndexPage = ({ pageContext }) => {
     playlist
   } = pageContext;
 
-  const seoTitle = `무도리스트 - ${playlist.title}`;
+  const seoTitle = `${playlist.title}`;
   return (
     <Layout>
       <SEO title={seoTitle} />
