@@ -21,5 +21,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
   ],
 }
