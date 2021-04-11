@@ -3,6 +3,7 @@ module.exports = {
     title: `무도리스트`,
     description: `무한도전 모아보기! 무야~호`,
     author: `@kim-sardine`,
+    siteUrl: `https://mudolist.sidepun.ch`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
