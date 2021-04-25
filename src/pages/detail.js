@@ -13,9 +13,14 @@ const IndexPage = ({ pageContext }) => {
   }
 
   const seoTitle = `${playlist.title}`;
+  const meta = [{
+    name: `og:image`,
+    content: playlist.thumbnail_url,
+  }]
+
   return (
     <Layout>
-      <SEO title={seoTitle} />
+      <SEO title={seoTitle} meta={meta} />
       <Detail playlist={playlist} />
     </Layout>
   )
